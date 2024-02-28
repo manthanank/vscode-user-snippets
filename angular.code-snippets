@@ -1,0 +1,496 @@
+{
+  "Angular Component": {
+    "prefix": "ngcomponent",
+    "description": "Angular component template",
+    "body": [
+      "<!-- $1.component.html -->",
+      "<div>$1 works!</div>",
+      "",
+      "<!-- $1.component.scss -->",
+      ".${1|component|} {",
+      "  $2",
+      "}",
+      "",
+      "// $1.component.ts",
+      "import { Component, OnInit } from '@angular/core';",
+      "",
+      "@Component({",
+      "  selector: '$1',",
+      "  templateUrl: './$1.component.html',",
+      "  styleUrls: ['./$1.component.scss']",
+      "})",
+      "export class ${1|PascalCase|}Component implements OnInit {",
+      "",
+      "  constructor() { }",
+      "",
+      "  ngOnInit(): void {",
+      "  }",
+      "",
+      "}"
+    ]
+  },
+
+  "Angular Service": {
+    "prefix": "ngservice",
+    "description": "Angular service",
+    "body": [
+      "// $1.service.ts",
+      "import { Injectable } from '@angular/core';",
+      "",
+      "@Injectable({",
+      "  providedIn: 'root'",
+      "})",
+      "export class ${1|PascalCase|}Service {",
+      "",
+      "  constructor() { }",
+      "",
+      "}"
+    ]
+  },
+
+  "Angular Directive": {
+    "prefix": "ngdirective",
+    "description": "Angular directive",
+    "body": [
+      "// $1.directive.ts",
+      "import { Directive, ElementRef } from '@angular/core';",
+      "",
+      "@Directive({",
+      "  selector: '[app$1]'",
+      "})",
+      "export class ${1|PascalCase|}Directive {",
+      "",
+      "  constructor(private elementRef: ElementRef) {",
+      "    this.elementRef.nativeElement.style.color = 'red';",
+      "  }",
+      "",
+      "}"
+    ]
+  },
+  
+  "Angular Module": {
+    "prefix": "ngmodule",
+    "description": "Angular module",
+    "body": [
+      "// $1.module.ts",
+      "import { NgModule } from '@angular/core';",
+      "import { CommonModule } from '@angular/common';",
+      "",
+      "@NgModule({",
+      "  declarations: [],",
+      "  imports: [",
+      "    CommonModule",
+      "  ]",
+      "})",
+      "export class ${1|PascalCase|}Module { }"
+    ]
+  },
+
+  "Angular Router Config": {
+    "prefix": "ngrouterconfig",
+    "description": "Angular router configuration",
+    "body": [
+      "// app-routing.module.ts",
+      "import { NgModule } from '@angular/core';",
+      "import { RouterModule, Routes } from '@angular/router';",
+      "",
+      "const routes: Routes = [",
+      "  { path: '', redirectTo: '/$1', pathMatch: 'full' },",
+      "  { path: '$1', component: ${1|PascalCase|}Component }",
+      "];",
+      "",
+      "@NgModule({",
+      "  imports: [RouterModule.forRoot(routes)],",
+      "  exports: [RouterModule]",
+      "})",
+      "export class AppRoutingModule { }"
+    ]
+  },
+
+  "Angular Pipe": {
+    "prefix": "ngpipe",
+    "description": "Angular pipe",
+    "body": [
+      "// $1.pipe.ts",
+      "import { Pipe, PipeTransform } from '@angular/core';",
+      "",
+      "@Pipe({",
+      "  name: '$1'",
+      "})",
+      "export class ${1|PascalCase|}Pipe implements PipeTransform {",
+      "",
+      "  transform(value: any, ...args: any[]): any {",
+      "    $2",
+      "  }",
+      "",
+      "}"
+    ]
+  },
+
+  "Angular Test": {
+    "prefix": "ngtest",
+    "description": "Angular unit test",
+    "body": [
+      "// $1.component.spec.ts",
+      "import { ComponentFixture, TestBed } from '@angular/core/testing';",
+      "import { ${1|PascalCase|}Component } from './$1.component';",
+      "",
+      "describe('${1|PascalCase|}Component', () => {",
+      "  let component: ${1|PascalCase|}Component;",
+      "  let fixture: ComponentFixture<${1|PascalCase|}Component>;",
+      "",
+      "  beforeEach(async () => {",
+      "    await TestBed.configureTestingModule({",
+      "      declarations: [${1|PascalCase|}Component]",
+      "    })",
+      "    .compileComponents();",
+      "  });",
+      "",
+      "  beforeEach(() => {",
+      "    fixture = TestBed.createComponent(${1|PascalCase|}Component);",
+      "    component = fixture.componentInstance;",
+      "    fixture.detectChanges();",
+      "  });",
+      "",
+      "  it('should create', () => {",
+      "    expect(component).toBeTruthy();",
+      "  });",
+      "}"
+    ]
+  },
+
+  "Angular Route Guard": {
+    "prefix": "ngrouteguard",
+    "description": "Angular route guard",
+    "body": [
+      "// $1.guard.ts",
+      "import { Injectable } from '@angular/core';",
+      "import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';",
+      "import { Observable } from 'rxjs';",
+      "",
+      "@Injectable({",
+      "  providedIn: 'root'",
+      "})",
+      "export class ${1|PascalCase|}Guard implements CanActivate {",
+      "",
+      "  canActivate(",
+      "    next: ActivatedRouteSnapshot,",
+      "    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {",
+      "    $2",
+      "  }",
+      "",
+      "}"
+    ]
+  },
+
+  "Angular Interceptor": {
+    "prefix": "nginterceptor",
+    "description": "Angular HTTP interceptor",
+    "body": [
+      "// $1.interceptor.ts",
+      "import { Injectable } from '@angular/core';",
+      "import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/common/http';",
+      "import { Observable } from 'rxjs';",
+      "",
+      "@Injectable()",
+      "export class ${1|PascalCase|}Interceptor implements HttpInterceptor {",
+      "",
+      "  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {",
+      "    $2",
+      "    return next.handle(request);",
+      "  }",
+      "",
+      "}"
+    ]
+  },
+
+  "Angular Enum": {
+    "prefix": "ngenum",
+    "description": "Angular enum",
+    "body": ["// $1.enum.ts", "export enum ${1|PascalCase|} {", "  $2", "}"]
+  },
+
+  "Angular Component HTML": {
+    "prefix": "ngcomphtml",
+    "description": "Angular component HTML template",
+    "body": [
+      "<!-- ${1:component-name}.component.html -->",
+      "<div>",
+      "  $2",
+      "</div>"
+    ]
+  },
+
+  "Angular Component SCSS": {
+    "prefix": "ngcompscss",
+    "description": "Angular component SCSS styles",
+    "body": [
+      "/* ${1:component-name}.component.scss */",
+      ".${1|component|} {",
+      "  $2",
+      "}"
+    ]
+  },
+
+  "Angular Component Spec": {
+    "prefix": "ngcompspec",
+    "description": "Angular component test spec",
+    "body": [
+      "// ${1:component-name}.component.spec.ts",
+      "import { ComponentFixture, TestBed } from '@angular/core/testing';",
+      "import { ${1|PascalCase|}Component } from './${1|component|}.component';",
+      "",
+      "describe('${1|PascalCase|}Component', () => {",
+      "  let component: ${1|PascalCase|}Component;",
+      "  let fixture: ComponentFixture<${1|PascalCase|}Component>;",
+      "",
+      "  beforeEach(async () => {",
+      "    await TestBed.configureTestingModule({",
+      "      declarations: [${1|PascalCase|}Component]",
+      "    })",
+      "    .compileComponents();",
+      "  });",
+      "",
+      "  beforeEach(() => {",
+      "    fixture = TestBed.createComponent(${1|PascalCase|}Component);",
+      "    component = fixture.componentInstance;",
+      "    fixture.detectChanges();",
+      "  });",
+      "",
+      "  it('should create', () => {",
+      "    expect(component).toBeTruthy();",
+      "  });",
+      "}"
+    ]
+  },
+
+  "Angular Service Spec": {
+    "prefix": "ngservspec",
+    "description": "Angular service test spec",
+    "body": [
+      "// ${1:service-name}.service.spec.ts",
+      "import { TestBed } from '@angular/core/testing';",
+      "import { ${1|PascalCase|}Service } from './${1|service|}.service';",
+      "",
+      "describe('${1|PascalCase|}Service', () => {",
+      "  let service: ${1|PascalCase|}Service;",
+      "",
+      "  beforeEach(() => {",
+      "    TestBed.configureTestingModule({});",
+      "    service = TestBed.inject(${1|PascalCase|}Service);",
+      "  });",
+      "",
+      "  it('should be created', () => {",
+      "    expect(service).toBeTruthy();",
+      "  });",
+      "}"
+    ]
+  },
+
+  "Angular Directive Spec": {
+    "prefix": "ngdirspec",
+    "description": "Angular directive test spec",
+    "body": [
+      "// ${1:directive-name}.directive.spec.ts",
+      "import { ${1|PascalCase|}Directive } from './${1|directive|}.directive';",
+      "",
+      "describe('${1|PascalCase|}Directive', () => {",
+      "  it('should create an instance', () => {",
+      "    const directive = new ${1|PascalCase|}Directive();",
+      "    expect(directive).toBeTruthy();",
+      "  });",
+      "});"
+    ]
+  },
+
+  "Angular Pipe Spec": {
+    "prefix": "ngpipespec",
+    "description": "Angular pipe test spec",
+    "body": [
+      "// ${1:pipe-name}.pipe.spec.ts",
+      "import { ${1|PascalCase|}Pipe } from './${1|pipe|}.pipe';",
+      "",
+      "describe('${1|PascalCase|}Pipe', () => {",
+      "  it('create an instance', () => {",
+      "    const pipe = new ${1|PascalCase|}Pipe();",
+      "    expect(pipe).toBeTruthy();",
+      "  });",
+      "});"
+    ]
+  },
+
+  "Angular Module Import": {
+    "prefix": "ngmodimport",
+    "description": "Angular module import statement",
+    "body": ["import { ${1|PascalCase|}Module } from './${1|module|}.module';"]
+  },
+
+  "Angular Injectable": {
+    "prefix": "nginjectable",
+    "description": "Angular Injectable decorator",
+    "body": ["@Injectable({ providedIn: 'root' })"]
+  },
+
+  "Angular Routing Path": {
+    "prefix": "ngroutepath",
+    "description": "Angular routing path definition",
+    "body": ["{ path: '${1:path}', component: ${2|PascalCase|}Component }"]
+  },
+
+  "Angular Routing Redirect": {
+    "prefix": "ngrouteredirect",
+    "description": "Angular routing redirect path",
+    "body": ["{ path: '', redirectTo: '/${1:path}', pathMatch: 'full' }"]
+  },
+
+  "Angular ngOnChanges": {
+    "prefix": "ngonchanges",
+    "description": "Angular ngOnChanges Lifecycle Hook",
+    "body": [
+      "ngOnChanges(changes: SimpleChanges): void {",
+      "  $1",
+      "}"
+    ]
+  },
+
+  "Angular ngOnInit": {
+    "prefix": "ngoninit",
+    "description": "Angular ngOnInit Lifecycle Hook",
+    "body": [
+      "ngOnInit(): void {",
+      "  $1",
+      "}"
+    ]
+  },
+
+  "Angular ngOnDestroy": {
+    "prefix": "ngondestroy",
+    "description": "Angular ngOnDestroy Lifecycle Hook",
+    "body": [
+      "ngOnDestroy(): void {",
+      "  $1",
+      "}"
+    ]
+  },
+
+  "Angular Lazy Loading Module": {
+    "prefix": "nglazyloadmodule",
+    "description": "Angular lazy-loaded module",
+    "body": [
+      "{ path: '${1:path}', loadChildren: () => import('./${2:module-path}/${3|module|}.module').then(m => m.${3|Module|}) }"
+    ]
+  },
+
+  "Angular Service Injection": {
+    "prefix": "ngserviceinjection",
+    "description": "Inject Angular Service",
+    "body": [
+      "constructor(private ${1:serviceName}: ${2|Service|}) { }"
+    ]
+  },
+
+  "Angular Router Outlet": {
+    "prefix": "ngrouteroutlet",
+    "description": "Angular Router Outlet",
+    "body": [
+      "<router-outlet></router-outlet>"
+    ]
+  },
+
+  "Angular Two-Way Binding": {
+    "prefix": "ngtwoway",
+    "description": "Angular Two-Way Binding (ngModel)",
+    "body": [
+      "<input [(ngModel)]=\"${1:modelName}\" />"
+    ]
+  },
+
+  "Angular Reactive Form Group": {
+    "prefix": "ngreactiveformgroup",
+    "description": "Angular Reactive Form Group",
+    "body": [
+      "this.${1:formGroup} = this.formBuilder.group({",
+      "  ${2:controlName}: ['', Validators.${3|required}]",
+      "});"
+    ]
+  },
+
+  "Angular Reactive Form Control": {
+    "prefix": "ngreactiveformcontrol",
+    "description": "Angular Reactive Form Control",
+    "body": [
+      "${1:controlName}: ['', Validators.${2|required}]"
+    ]
+  },
+  
+  "Angular Async Pipe": {
+    "prefix": "ngasyncpipe",
+    "description": "Angular Async Pipe",
+    "body": [
+      "{{ ${1:data$} | async }}"
+    ]
+  } ,
+  
+  "Lazy Loaded Route Module": {
+    "prefix": "nglazyroute",
+    "body": [
+      "{",
+      "\tpath: '${1:path}',",
+      "\tloadChildren: () => import('${2:modulePath}').then(m => m.${3:ModuleName})",
+      "}"
+    ],
+    "description": "Create a lazy-loaded route module"
+  },
+  
+  "Lazy Loaded Route with Preloading": {
+    "prefix": "nglazyroutepreload",
+    "body": [
+      "{",
+      "\tpath: '${1:path}',",
+      "\tloadChildren: () => import('${2:modulePath}').then(m => m.${3:ModuleName}),",
+      "\tcanLoad: [${4:AuthGuard}]",
+      "}"
+    ],
+    "description": "Create a lazy-loaded route module with preloading"
+  },
+  
+  "Lazy Loaded Feature Module": {
+    "prefix": "nglazyfeature",
+    "body": [
+      "const routes: Routes = [",
+      "\t{",
+      "\t\tpath: '${1:path}',",
+      "\t\tloadChildren: () => import('${2:modulePath}').then(m => m.${3:ModuleName})",
+      "\t}",
+      "];",
+      "",
+      "@NgModule({",
+      "\timports: [RouterModule.forChild(routes)],",
+      "\texports: [RouterModule]",
+      "})",
+      "export class ${4:FeatureModule} { }"
+    ],
+    "description": "Create a lazy-loaded feature module"
+  },
+  
+  "Lazy Loaded Feature Module with Preloading": {
+    "prefix": "nglazyfeaturepreload",
+    "body": [
+      "const routes: Routes = [",
+      "\t{",
+      "\t\tpath: '${1:path}',",
+      "\t\tloadChildren: () => import('${2:modulePath}').then(m => m.${3:ModuleName}),",
+      "\t\tcanLoad: [${4:AuthGuard}]",
+      "\t}",
+      "];",
+      "",
+      "@NgModule({",
+      "\timports: [RouterModule.forChild(routes)],",
+      "\texports: [RouterModule]",
+      "})",
+      "export class ${5:FeatureModule} { }"
+    ],
+    "description": "Create a lazy-loaded feature module with preloading"
+  }
+  
+}
