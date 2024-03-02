@@ -1,0 +1,773 @@
+{
+    "For Loop": {
+      "prefix": "for",
+      "body": [
+        "for (let ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++) {",
+        "\t${3:// code}",
+        "}"
+      ],
+      "description": "Inserts a for loop"
+    },
+  
+    "Function Declaration": {
+      "prefix": "func",
+      "body": [
+        "function ${1:functionName}(${2:parameters}) {",
+        "\t${3:// code}",
+        "}"
+      ],
+      "description": "Inserts a function declaration"
+    },
+  
+    "If Statement": {
+      "prefix": "if",
+      "body": ["if (${1:condition}) {", "\t${2:// code}", "}"],
+      "description": "Inserts an if statement"
+    },
+    
+    "Arrow Function": {
+      "prefix": "af",
+      "body": [
+        "const ${1:funcName} = (${2:params}) => {",
+        "\t${3:// code}",
+        "};"
+      ],
+      "description": "Inserts an arrow function"
+    },
+  
+    "Try-Catch Block": {
+      "prefix": "try",
+      "body": [
+        "try {",
+        "\t${1:// code}",
+        "} catch (${2:error}) {",
+        "\t${3:// code}",
+        "}"
+      ],
+      "description": "Inserts a try-catch block"
+    },
+  
+    "Object Literal": {
+      "prefix": "obj",
+      "body": [
+        "const ${1:objectName} = {",
+        "\t${2:key}: ${3:value},",
+        "\t${4:key}: ${5:value}",
+        "};"
+      ],
+      "description": "Inserts an object literal"
+    },
+  
+    "Import Statement": {
+      "prefix": "imp",
+      "body": ["import ${2:moduleName} from '${1:module}';"],
+      "description": "Inserts an import statement"
+    },
+  
+    "Constructor Function": {
+      "prefix": "con",
+      "body": [
+        "function ${1:ClassName}(${2:parameters}) {",
+        "\tthis.${3:property} = ${3:value};",
+        "}"
+      ],
+      "description": "Inserts a constructor function"
+    },
+  
+    "Console Log": {
+      "prefix": "log",
+      "body": ["console.log(${1:expression});"],
+      "description": "Inserts a console.log statement"
+    },
+  
+    "forEach": {
+      "prefix": "fe",
+      "body": ["array.forEach(item => {", "\t$1", "});"],
+      "description": "forEach - Array method"
+    },
+  
+    "map": {
+      "prefix": "ma",
+      "body": ["const newArray = array.map(item => {", "\t$1", "});"],
+      "description": "map - Array method"
+    },
+  
+    "filter": {
+      "prefix": "fi",
+      "body": ["const filteredArray = array.filter(item => {", "\t$1", "});"],
+      "description": "filter - Array method"
+    },
+  
+    "reduce": {
+      "prefix": "re",
+      "body": [
+        "const result = array.reduce((accumulator, item) => {",
+        "\t$1",
+        "}, initialValue);"
+      ],
+      "description": "reduce - Array method"
+    },
+  
+    "find": {
+      "prefix": "fi",
+      "body": ["const foundItem = array.find(item => {", "\t$1", "});"],
+      "description": "find - Array method"
+    },
+  
+    "some": {
+      "prefix": "so",
+      "body": ["const hasMatch = array.some(item => {", "\t$1", "});"],
+      "description": "some - Array method"
+    },
+  
+    "every": {
+      "prefix": "ev",
+      "body": ["const allMatch = array.every(item => {", "\t$1", "});"],
+      "description": "every - Array method"
+    },
+  
+    "sort": {
+      "prefix": "so",
+      "body": ["const sortedArray = array.sort((a, b) => {", "\t$1", "});"],
+      "description": "sort - Array method"
+    },
+  
+    "includes": {
+      "prefix": "in",
+      "body": ["const isIncluded = array.includes(element);"],
+      "description": "includes - Array method"
+    },
+  
+    "slice": {
+      "prefix": "sl",
+      "body": ["const newArray = array.slice(startIndex, endIndex);"],
+      "description": "slice - Array method"
+    },
+  
+    "findIndex": {
+      "prefix": "fi",
+      "body": ["const foundIndex = array.findIndex(item => {", "\t$1", "});"],
+      "description": "findIndex - Array method"
+    },
+  
+    "concat": {
+      "prefix": "co",
+      "body": ["const newArray = array.concat(anotherArray);"],
+      "description": "concat - Array method"
+    },
+  
+    "push": {
+      "prefix": "pu",
+      "body": ["array.push(element1, element2);"],
+      "description": "push - Array method"
+    },
+  
+    "pop": {
+      "prefix": "po",
+      "body": ["const lastElement = array.pop();"],
+      "description": "pop - Array method"
+    },
+  
+    "shift": {
+      "prefix": "sh",
+      "body": ["const firstElement = array.shift();"],
+      "description": "shift - Array method"
+    },
+  
+    "reverse": {
+      "prefix": "re",
+      "body": ["array.reverse();"],
+      "description": "reverse - Array method"
+    },
+  
+    "join": {
+      "prefix": "jo",
+      "body": ["const joinedString = array.join(separator);"],
+      "description": "join - Array method"
+    },
+  
+    "splice": {
+      "prefix": "sp",
+      "body": ["array.splice(startIndex, deleteCount, element1, element2);"],
+      "description": "splice - Array method"
+    },
+  
+    "flat": {
+      "prefix": "fl",
+      "body": ["const flattenedArray = array.flat(depth);"],
+      "description": "flat - Array method"
+    },
+  
+    "Array.from()": {
+      "prefix": "afm",
+      "body": ["const newArray = Array.from(array);"],
+      "description": "Array.from() - Create a new array from an iterable"
+    },
+  
+    "Array.isArray()": {
+      "prefix": "aia",
+      "body": ["const isArr = Array.isArray(value);"],
+      "description": "Array.isArray() - Check if a value is an array"
+    },
+  
+    "Set Timeout": {
+      "prefix": "setTimeout",
+      "body": ["setTimeout(() => {", "\t${1:// code to execute after delay}", "}, ${2:delayInMilliseconds});"],
+      "description": "Set Timeout - Execute code after a delay"
+    },
+  
+    "Set Interval": {
+      "prefix": "setInterval",
+      "body": ["setInterval(() => {", "\t${1:// code to repeat at intervals}", "}, ${2:intervalInMilliseconds});"],
+      "description": "Set Interval - Execute code at regular intervals"
+    },
+  
+    "String Interpolation (Template Literal)": {
+      "prefix": "stringtemplate",
+      "body": ["const interpolatedString = `This is a ${1:variable} in a template literal`;"],
+      "description": "String Interpolation (Template Literal)"
+    },
+  
+    "Object Destructuring": {
+      "prefix": "objdestructure",
+      "body": ["const { ${1:property1}, ${2:property2} } = object;"],
+      "description": "Object Destructuring"
+    },
+  
+    "Spread Operator (Array)": {
+      "prefix": "spreadarray",
+      "body": ["const newArray = [...array];"],
+      "description": "Spread Operator (Array)"
+    },
+  
+    "Spread Operator (Object)": {
+      "prefix": "spreadobject",
+      "body": ["const newObj = { ...obj };"],
+      "description": "Spread Operator (Object)"
+    },
+  
+    "Async/Await Function": {
+      "prefix": "asyncfunction",
+      "body": [
+        "async function ${1:functionName}() {",
+        "\ttry {",
+        "\t\tconst result = await ${2:asyncOperation}();",
+        "\t\t${3:// code}",
+        "\t} catch (error) {",
+        "\t\tconsole.error(error);",
+        "\t}",
+        "}"
+      ],
+      "description": "Async/Await Function"
+    },
+  
+    "Promise": {
+      "prefix": "promise",
+      "body": [
+        "const myPromise = new Promise((resolve, reject) => {",
+        "\t// Resolve the promise using resolve(value);",
+        "\t// Reject the promise using reject(error);",
+        "});"
+      ],
+      "description": "Create a Promise"
+    },
+  
+    "Fetch API": {
+      "prefix": "fetch",
+      "body": [
+        "fetch('${1:url}')",
+        "\t.then(response => response.json())",
+        "\t.then(data => {",
+        "\t\t${2:// Handle data}",
+        "\t})",
+        "\t.catch(error => {",
+        "\t\tconsole.error(error);",
+        "\t});"
+      ],
+      "description": "Fetch API"
+    },
+  
+    "Object.keys()": {
+      "prefix": "objkeys",
+      "body": ["const keys = Object.keys(object);"],
+      "description": "Object.keys() - Get an array of object keys"
+    },
+  
+    "Object.values()": {
+      "prefix": "objvalues",
+      "body": ["const values = Object.values(object);"],
+      "description": "Object.values() - Get an array of object values"
+    },
+  
+    "Object.entries()": {
+      "prefix": "objentries",
+      "body": ["const entries = Object.entries(object);"],
+      "description": "Object.entries() - Get an array of object key-value pairs"
+    },
+  
+    "Array.includes()": {
+      "prefix": "arrincludes",
+      "body": ["const isIncluded = array.includes(value);"],
+      "description": "Array.includes() - Check if an element exists in an array"
+    },
+  
+    "Array.findIndex()": {
+      "prefix": "arrfindindex",
+      "body": ["const index = array.findIndex(element => {", "\treturn ${1:condition};", "});"],
+      "description": "Array.findIndex() - Find the index of the first element that satisfies a condition"
+    },
+  
+    "Array.reduceRight()": {
+      "prefix": "arrreduceright",
+      "body": ["const result = array.reduceRight((accumulator, currentValue) => {", "\treturn ${1:accumulatorExpression};", "}, initialValue);"],
+      "description": "Array.reduceRight() - Reduce from right to left"
+    },
+  
+    "Array.flatMap()": {
+      "prefix": "arrflatmap",
+      "body": ["const result = array.flatMap(element => {", "\treturn ${1:mappedArray};", "});"],
+      "description": "Array.flatMap() - Map and flatten in one step"
+    },
+  
+    "Array.fill()": {
+      "prefix": "arrfill",
+      "body": ["const filledArray = array.fill(${1:value}, startIndex, endIndex);"],
+      "description": "Array.fill() - Fill array elements with a value"
+    },
+  
+    "Array.from() with Mapping Function": {
+      "prefix": "afmm",
+      "body": ["const newArray = Array.from(array, element => {", "\treturn ${1:mappingExpression};", "});"],
+      "description": "Array.from() with Mapping Function"
+    },
+  
+    "Array.reduce() with Initial Value": {
+      "prefix": "arrreduceiv",
+      "body": ["const result = array.reduce((accumulator, currentValue) => {", "\treturn ${1:accumulatorExpression};", "}, initialValue);"],
+      "description": "Array.reduce() with Initial Value"
+    },
+  
+    "Array.forEach() with Index": {
+      "prefix": "arrforeachi",
+      "body": ["array.forEach((element, index) => {", "\t${1:// code}", "});"],
+      "description": "Array.forEach() with Index"
+    },
+  
+    "String.includes()": {
+      "prefix": "strincludes",
+      "body": ["const isIncluded = string.includes(substring);"],
+      "description": "String.includes() - Check if a substring exists in a string"
+    },
+  
+    "String.startsWith()": {
+      "prefix": "strstarts",
+      "body": ["const startsWith = string.startsWith(prefix);"],
+      "description": "String.startsWith() - Check if a string starts with a prefix"
+    },
+  
+    "String.endsWith()": {
+      "prefix": "strends",
+      "body": ["const endsWith = string.endsWith(suffix);"],
+      "description": "String.endsWith() - Check if a string ends with a suffix"
+    },
+  
+    "String.trim()": {
+      "prefix": "strtrim",
+      "body": ["const trimmedString = string.trim();"],
+      "description": "String.trim() - Remove leading and trailing whitespace"
+    },
+  
+    "Object Method - Function Expression": {
+      "prefix": "objmethod",
+      "body": [
+        "${1:methodName}: function(${2:parameters}) {",
+        "\t$0",
+        "},"
+      ],
+      "description": "Create an object method (function expression)"
+    },
+    
+    "Object Method - Arrow Function": {
+      "prefix": "objarrowmethod",
+      "body": [
+        "${1:methodName}: (${2:parameters}) => {",
+        "\t$0",
+        "},"
+      ],
+      "description": "Create an object method (arrow function)"
+    },
+    
+    "Object Method - Shorthand": {
+      "prefix": "objshorthand",
+      "body": [
+        "${1:methodName}(${2:parameters}) {",
+        "\t$0",
+        "},"
+      ],
+      "description": "Create an object method (shorthand)"
+    },
+    
+    "Object Getter Method": {
+      "prefix": "objgetter",
+      "body": [
+        "get ${1:propertyName}() {",
+        "\treturn ${2:value};",
+        "},"
+      ],
+      "description": "Create an object getter method"
+    },
+    
+    "Object Setter Method": {
+      "prefix": "objsetter",
+      "body": [
+        "set ${1:propertyName}(${2:value}) {",
+        "\tthis.${1:propertyName} = ${2:value};",
+        "}"
+      ],
+      "description": "Create an object setter method"
+    },
+      
+    "Event Listener - AddEventListener": {
+      "prefix": "addeventlistener",
+      "body": [
+        "document.${1:element}.addEventListener('${2:event}', (event) => {",
+        "\t$0",
+        "});"
+      ],
+      "description": "Add event listener using addEventListener"
+    },
+    
+    "Event Listener - Click": {
+      "prefix": "clickevent",
+      "body": [
+        "document.${1:element}.addEventListener('click', (event) => {",
+        "\t$0",
+        "});"
+      ],
+      "description": "Add click event listener"
+    },
+    
+    "Event Listener - Change": {
+      "prefix": "changeevent",
+      "body": [
+        "document.${1:element}.addEventListener('change', (event) => {",
+        "\t$0",
+        "});"
+      ],
+      "description": "Add change event listener"
+    },
+    
+    "Event Listener - Keydown": {
+      "prefix": "keydownevent",
+      "body": [
+        "document.${1:element}.addEventListener('keydown', (event) => {",
+        "\t$0",
+        "});"
+      ],
+      "description": "Add keydown event listener"
+    },
+    
+    "Event Listener - Submit": {
+      "prefix": "submitevent",
+      "body": [
+        "document.${1:element}.addEventListener('submit', (event) => {",
+        "\t$0",
+        "});"
+      ],
+      "description": "Add submit event listener"
+    },
+    
+    "Event Prevent Default": {
+      "prefix": "preventdefault",
+      "body": [
+        "event.preventDefault();"
+      ],
+      "description": "Prevent default behavior of the event"
+    },
+    
+    "Event Stop Propagation": {
+      "prefix": "stoppropagation",
+      "body": [
+        "event.stopPropagation();"
+      ],
+      "description": "Stop event propagation"
+    },
+    
+    "Event Target": {
+      "prefix": "eventtarget",
+      "body": [
+        "const target = event.target;"
+      ],
+      "description": "Get the event target"
+    },
+    
+    "Event Current Target": {
+      "prefix": "eventcurrenttarget",
+      "body": [
+        "const currentTarget = event.currentTarget;"
+      ],
+      "description": "Get the event current target"
+    },
+    
+    "String Length": {
+      "prefix": "stringlength",
+      "body": [
+        "${1:string}.length"
+      ],
+      "description": "Get the length of a string"
+    },
+    
+    "String charAt()": {
+      "prefix": "stringcharat",
+      "body": [
+        "${1:string}.charAt(${2:index})"
+      ],
+      "description": "Get the character at a specified index"
+    },
+    
+    "String charCodeAt()": {
+      "prefix": "stringcharcodeat",
+      "body": [
+        "${1:string}.charCodeAt(${2:index})"
+      ],
+      "description": "Get the Unicode value of the character at a specified index"
+    },
+    
+    "String [ ]": {
+      "prefix": "stringbracket",
+      "body": [
+        "${1:string}[${2:index}]"
+      ],
+      "description": "Access a character at a specified index using bracket notation"
+    },
+    
+    "String slice()": {
+      "prefix": "stringslice",
+      "body": [
+        "${1:string}.slice(${2:start}, ${3:end})"
+      ],
+      "description": "Extracts a section of a string and returns it as a new string"
+    },
+    
+    "String substring()": {
+      "prefix": "stringsubstring",
+      "body": [
+        "${1:string}.substring(${2:start}, ${3:end})"
+      ],
+      "description": "Extracts the characters between two specified indices"
+    },
+    
+    "String substr()": {
+      "prefix": "stringsubstr",
+      "body": [
+        "${1:string}.substr(${2:start}, ${3:length})"
+      ],
+      "description": "Extracts a specified number of characters from a string"
+    },
+    
+    "String toUpperCase()": {
+      "prefix": "stringuppercase",
+      "body": [
+        "${1:string}.toUpperCase()"
+      ],
+      "description": "Converts a string to uppercase letters"
+    },
+    
+    "String toLowerCase()": {
+      "prefix": "stringlowercase",
+      "body": [
+        "${1:string}.toLowerCase()"
+      ],
+      "description": "Converts a string to lowercase letters"
+    },
+    
+    "String concat()": {
+      "prefix": "stringconcat",
+      "body": [
+        "${1:string1}.concat(${2:string2})"
+      ],
+      "description": "Concatenates two or more strings"
+    },
+    
+    "String trim()": {
+      "prefix": "stringtrim",
+      "body": [
+        "${1:string}.trim()"
+      ],
+      "description": "Removes whitespace from both ends of a string"
+    },
+    
+    "String trimStart()": {
+      "prefix": "stringtrimstart",
+      "body": [
+        "${1:string}.trimStart()"
+      ],
+      "description": "Removes whitespace from the beginning of a string"
+    },
+    
+    "String trimEnd()": {
+      "prefix": "stringtrimend",
+      "body": [
+        "${1:string}.trimEnd()"
+      ],
+      "description": "Removes whitespace from the end of a string"
+    },
+    
+    "String padStart()": {
+      "prefix": "stringpadstart",
+      "body": [
+        "${1:string}.padStart(${2:length}, '${3:padString}')"
+      ],
+      "description": "Pads the start of a string with another string until the resulting string reaches the given length"
+    },
+    
+    "String padEnd()": {
+      "prefix": "stringpadend",
+      "body": [
+        "${1:string}.padEnd(${2:length}, '${3:padString}')"
+      ],
+      "description": "Pads the end of a string with another string until the resulting string reaches the given length"
+    },
+    
+    "String repeat()": {
+      "prefix": "stringrepeat",
+      "body": [
+        "${1:string}.repeat(${2:count})"
+      ],
+      "description": "Returns a new string with a specified number of copies of the string"
+    },
+    
+    "String replace()": {
+      "prefix": "stringreplace",
+      "body": [
+        "${1:string}.replace('${2:oldValue}', '${3:newValue}')"
+      ],
+      "description": "Replaces a specified value with another value in a string"
+    },
+    
+    "String replaceAll()": {
+      "prefix": "stringreplaceall",
+      "body": [
+        "${1:string}.replaceAll('${2:oldValue}', '${3:newValue}')"
+      ],
+      "description": "Replaces all occurrences of a specified value with another value in a string"
+    },
+    
+    "String split()": {
+      "prefix": "stringsplit",
+      "body": [
+        "${1:string}.split('${2:separator}')"
+      ],
+      "description": "Splits a string into an array of substrings based on a specified separator"
+    },
+    
+    "String indexOf()": {
+      "prefix": "stringindexof",
+      "body": [
+        "${1:string}.indexOf('${2:searchValue}', ${3:fromIndex})"
+      ],
+      "description": "Returns the index within the calling string object of the first occurrence of the specified value, starting the search at fromIndex"
+    },
+    
+    "String lastIndexOf()": {
+      "prefix": "stringlastindexof",
+      "body": [
+        "${1:string}.lastIndexOf('${2:searchValue}', ${3:fromIndex})"
+      ],
+      "description": "Returns the index within the calling string object of the last occurrence of the specified value, searching backwards from fromIndex"
+    },
+    
+    "String search()": {
+      "prefix": "stringsearch",
+      "body": [
+        "${1:string}.search(/${2:pattern}/)"
+      ],
+      "description": "Searches a string for a specified value or regular expression and returns the position of the match"
+    },
+    
+    "String match()": {
+      "prefix": "stringmatch",
+      "body": [
+        "${1:string}.match(/${2:pattern}/)"
+      ],
+      "description": "Returns an array containing all of the matches, including capturing groups, or null if no match is found"
+    },
+    
+    "String matchAll()": {
+      "prefix": "stringmatchall",
+      "body": [
+        "[...${1:string}.matchAll(/${2:pattern}/g)]"
+      ],
+      "description": "Returns an iterator containing all matches of a regular expression against a string"
+    },
+    
+    "String includes()": {
+      "prefix": "stringincludes",
+      "body": [
+        "${1:string}.includes('${2:searchValue}', ${3:fromIndex})"
+      ],
+      "description": "Determines whether a string contains the specified value"
+    },
+    
+    "String startsWith()": {
+      "prefix": "stringstartswith",
+      "body": [
+        "${1:string}.startsWith('${2:searchValue}', ${3:position})"
+      ],
+      "description": "Determines whether a string begins with the characters of a specified string"
+    },
+    
+    "String endsWith()": {
+      "prefix": "stringendswith",
+      "body": [
+        "${1:string}.endsWith('${2:searchValue}', ${3:length})"
+      ],
+      "description": "Determines whether a string ends with the characters of a specified string"
+    },
+    
+    "Template String - Basic": {
+      "prefix": "templatebasic",
+      "body": [
+        "const ${1:variable} = `This is a template string`;"
+      ],
+      "description": "Create a basic template string"
+    },
+    
+    "Template String - Interpolation": {
+      "prefix": "templateinterpolation",
+      "body": [
+        "const ${1:variable} = `${2:value}`;"
+      ],
+      "description": "Create a template string with interpolation"
+    },
+    
+    "Template String - Multiline": {
+      "prefix": "templatemultiline",
+      "body": [
+        "const ${1:variable} = `This is a",
+        "multiline template string`;"
+      ],
+      "description": "Create a multiline template string"
+    },
+    
+    "Template String - Expression": {
+      "prefix": "templateexpression",
+      "body": [
+        "const ${1:variable} = `The result is ${2:${1:expression}}`;"
+      ],
+      "description": "Create a template string with an expression"
+    },
+    
+    "Template String - Tagged Template": {
+      "prefix": "templatetag",
+      "body": [
+        "const result = tag`template ${1:string}`;",
+        "function tag(strings, ...values) {",
+        "\treturn `${2:processed} ${3:template}`;",
+        "}"
+      ],
+      "description": "Create a tagged template function"
+    }
+    
+  }
+  

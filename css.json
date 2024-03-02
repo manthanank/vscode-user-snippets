@@ -1,0 +1,128 @@
+{
+	"CSS Selector": {
+		"prefix": "cssselector",
+		"body": ["${1:selector} {", "\t$2", "}"],
+		"description": "CSS Selector"
+	  },
+	  "CSS Class Selector": {
+		"prefix": "cssclass",
+		"body": [".${1:className} {", "\t$2", "}"],
+		"description": "CSS Class Selector"
+	  },
+	  "CSS ID Selector": {
+		"prefix": "cssid",
+		"body": ["#${1:idName} {", "\t$2", "}"],
+		"description": "CSS ID Selector"
+	  },
+	  "CSS Property Declaration": {
+		"prefix": "cssproperty",
+		"body": ["${1:property}: ${2:value};"],
+		"description": "CSS Property Declaration"
+	  },
+	  "CSS Comment": {
+		"prefix": "csscomment",
+		"body": ["/* ${1:Comment} */"],
+		"description": "CSS Comment"
+	  },
+	  "CSS Media Query": {
+		"prefix": "cssmedia",
+		"body": ["@media screen and (${1:condition}) {", "\t$2", "}"],
+		"description": "CSS Media Query"
+	  },
+	  "CSS Font Face": {
+		"prefix": "cssfont",
+		"body": [
+		  "@font-face {",
+		  "\tfont-family: '${1:FontName}';",
+		  "\tsrc: url('${2:font.woff}') format('woff');",
+		  "\tfont-weight: ${3:normal};",
+		  "\tfont-style: ${4:normal};",
+		  "}"
+		],
+		"description": "CSS Font Face"
+	  },
+	  "CSS Keyframes Animation": {
+		"prefix": "csskeyframes",
+		"body": [
+		  "@keyframes ${1:animationName} {",
+		  "\t0% { $2 }",
+		  "\t100% { $3 }",
+		  "}"
+		],
+		"description": "CSS Keyframes Animation"
+	  },
+	  "CSS Transition Property": {
+		"prefix": "csstransition",
+		"body": ["transition: ${1:property} ${2:duration} ${3:timingFunction};"],
+		"description": "CSS Transition Property"
+	  },
+	  "CSS Box Model": {
+		"prefix": "cssboxmodel",
+		"body": [
+		  "margin: ${1:0};",
+		  "padding: ${2:0};",
+		  "border: ${3:0} solid ${4:#000};"
+		],
+		"description": "CSS Box Model"
+	  },
+	  "CSS Flexbox Container": {
+		"prefix": "cssflexcontainer",
+		"body": [
+		  "display: flex;",
+		  "flex-direction: ${1:row};",
+		  "justify-content: ${2:flex-start};",
+		  "align-items: ${3:center};"
+		],
+		"description": "CSS Flexbox Container"
+	  },
+	  "CSS Flexbox Item": {
+		"prefix": "cssflexitem",
+		"body": ["flex: ${1:1};"],
+		"description": "CSS Flexbox Item"
+	  },
+	  "CSS Media Query - Mobile": {
+		"prefix": "cssmediamobile",
+		"body": [
+			"@media screen and (max-width: 767px) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Mobile"
+	},
+	"CSS Media Query - Tablet": {
+		"prefix": "cssmediatablet",
+		"body": [
+			"@media screen and (min-width: 768px) and (max-width: 1023px) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Tablet"
+	},
+	"CSS Media Query - Desktop": {
+		"prefix": "cssmediadesktop",
+		"body": [
+			"@media screen and (min-width: 1024px) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Desktop"
+	},
+	"CSS Media Query - Landscape": {
+		"prefix": "cssmedialandscape",
+		"body": [
+			"@media screen and (orientation: landscape) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Landscape Orientation"
+	},
+	"CSS Media Query - Portrait": {
+		"prefix": "cssmediaportrait",
+		"body": [
+			"@media screen and (orientation: portrait) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Portrait Orientation"
+	}	
+}

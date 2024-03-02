@@ -1,0 +1,103 @@
+{
+	"HTML5 Template": {
+		"prefix": "html5",
+		"body": [
+		  "<!DOCTYPE html>",
+		  "<html>",
+		  "<head>",
+		  "\t<meta charset='UTF-8'>",
+		  "\t<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+		  "\t<title>${1:Document}</title>",
+		  "</head>",
+		  "<body>",
+		  "\t$2",
+		  "</body>",
+		  "</html>"
+		],
+		"description": "HTML5 Template"
+	  },
+	  "HTML Comment": {
+		"prefix": "htmlcomment",
+		"body": ["<!-- ${1:Comment} -->"],
+		"description": "HTML Comment"
+	  },
+	  "HTML Link (CSS)": {
+		"prefix": "htmllinkcss",
+		"body": ["<link rel='stylesheet' href='${1:styles.css}'>"],
+		"description": "HTML Link (CSS)"
+	  },
+	  "HTML Script (JavaScript)": {
+		"prefix": "htmlscriptjs",
+		"body": ["<script src='${1:script.js}'></script>"],
+		"description": "HTML Script (JavaScript)"
+	  },
+	  "HTML Image": {
+		"prefix": "htmlimage",
+		"body": ["<img src='${1:image.jpg}' alt='${2:Description}'>"],
+		"description": "HTML Image"
+	  },
+	  "HTML Anchor (Link)": {
+		"prefix": "htmlanchor",
+		"body": ["<a href='${1:#}'>${2:Link Text}</a>"],
+		"description": "HTML Anchor (Link)"
+	  },
+	  "HTML Unordered List (ul)": {
+		"prefix": "htmlul",
+		"body": [
+		  "<ul>",
+		  "\t<li>${1:Item 1}</li>",
+		  "\t<li>${2:Item 2}</li>",
+		  "\t<li>${3:Item 3}</li>",
+		  "</ul>"
+		],
+		"description": "HTML Unordered List (ul)"
+	  },
+	  "HTML Ordered List (ol)": {
+		"prefix": "htmlol",
+		"body": [
+		  "<ol>",
+		  "\t<li>${1:Item 1}</li>",
+		  "\t<li>${2:Item 2}</li>",
+		  "\t<li>${3:Item 3}</li>",
+		  "</ol>"
+		],
+		"description": "HTML Ordered List (ol)"
+	  },
+	  "HTML Table": {
+		"prefix": "htmltable",
+		"body": [
+		  "<table>",
+		  "\t<thead>",
+		  "\t\t<tr>",
+		  "\t\t\t<th>${1:Header 1}</th>",
+		  "\t\t\t<th>${2:Header 2}</th>",
+		  "\t\t</tr>",
+		  "\t</thead>",
+		  "\t<tbody>",
+		  "\t\t<tr>",
+		  "\t\t\t<td>${3:Row 1, Cell 1}</td>",
+		  "\t\t\t<td>${4:Row 1, Cell 2}</td>",
+		  "\t\t</tr>",
+		  "\t\t<tr>",
+		  "\t\t\t<td>${5:Row 2, Cell 1}</td>",
+		  "\t\t\t<td>${6:Row 2, Cell 2}</td>",
+		  "\t\t</tr>",
+		  "\t</tbody>",
+		  "</table>"
+		],
+		"description": "HTML Table"
+	  },
+	  "HTML Form": {
+		"prefix": "htmlform",
+		"body": [
+		  "<form action='${1:action.html}' method='${2:post}'>",
+		  "\t<label for='${3:input1}'>${4:Label 1}</label>",
+		  "\t<input type='${5:text}' id='${6:input1}' name='${7:input1}' required>",
+		  "\t<label for='${8:input2}'>${9:Label 2}</label>",
+		  "\t<input type='${10:text}' id='${11:input2}' name='${12:input2}' required>",
+		  "\t<button type='${13:submit}'>${14:Submit}</button>",
+		  "</form>"
+		],
+		"description": "HTML Form"
+	  }	  
+}
