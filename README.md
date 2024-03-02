@@ -4,3 +4,5 @@
 - [CSS](./css.json)
 - [JavaScript](./javascript.json)
 - [Angular](./angular.code-snippets)
+- [Git](./git.json)
+

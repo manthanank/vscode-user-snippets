@@ -1,0 +1,248 @@
+{
+	"Commit": {
+		"prefix": "commit",
+		"body": [
+			"git commit -m \"$1\""
+		],
+		"description": "Commit with message"
+	},
+	"Commit all": {
+		"prefix": "commitall",
+		"body": [
+			"git commit -am \"$1\""
+		],
+		"description": "Commit all with message"
+	},
+	"Commit all with message": {
+		"prefix": "commitallmsg",
+		"body": [
+			"git commit -am \"$1\""
+		],
+		"description": "Commit all with message"
+	},
+	"Commit all with message and push": {
+		"prefix": "commitallmsgpush",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push"
+		],
+		"description": "Commit all with message and push"
+	},
+	"Commit all with message and push origin": {
+		"prefix": "commitallmsgpushorigin",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin"
+		],
+		"description": "Commit all with message and push origin"
+	},
+	"Commit all with message and push origin master": {
+		"prefix": "commitallmsgpushoriginmaster",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin master"
+		],
+		"description": "Commit all with message and push origin master"
+	},
+	"Commit all with message and push origin main": {
+		"prefix": "commitallmsgpushoriginmain",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin main"
+		],
+		"description": "Commit all with message and push origin main"
+	},
+	"Commit all with message and push origin develop": {
+		"prefix": "commitallmsgpushorigindevelop",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin develop"
+		],
+		"description": "Commit all with message and push origin develop"
+	},
+	"Commit all with message and push origin feature": {
+		"prefix": "commitallmsgpushoriginfeature",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin feature"
+		],
+		"description": "Commit all with message and push origin feature"
+	},
+	"Commit all with message and push origin bugfix": {
+		"prefix": "commitallmsgpushoriginbugfix",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin bugfix"
+		],
+		"description": "Commit all with message and push origin bugfix"
+	},
+	"Commit all with message and push origin hotfix": {
+		"prefix": "commitallmsgpushoriginhotfix",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin hotfix"
+		],
+		"description": "Commit all with message and push origin hotfix"
+	},
+	"Commit all with message and push origin release": {
+		"prefix": "commitallmsgpushoriginrelease",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin release"
+		],
+		"description": "Commit all with message and push origin release"
+	},
+	"Commit all with message and push origin support": {
+		"prefix": "commitallmsgpushoriginsupport",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin support"
+		],
+		"description": "Commit all with message and push origin support"
+	},
+	"Commit all with message and push origin version": {
+		"prefix": "commitallmsgpushoriginversion",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin version"
+		],
+		"description": "Commit all with message and push origin version"
+	},
+	"Commit all with message and push origin environment": {
+		"prefix": "commitallmsgpushoriginenvironment",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin environment"
+		],
+		"description": "Commit all with message and push origin environment"
+	},
+	"Commit all with message and push origin deployment": {
+		"prefix": "commitallmsgpushorigindeployment",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin deployment"
+		],
+		"description": "Commit all with message and push origin deployment"
+	},
+	"Commit all with message and push origin production": {
+		"prefix": "commitallmsgpushoriginproduction",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin production"
+		],
+		"description": "Commit all with message and push origin production"
+	},
+	"Commit all with message and push origin staging": {
+		"prefix": "commitallmsgpushoriginstaging",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin staging"
+		],
+		"description": "Commit all with message and push origin staging"
+	},
+	"Commit all with message and push origin testing": {
+		"prefix": "commitallmsgpushorigintesting",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin testing"
+		],
+		"description": "Commit all with message and push origin testing"
+	},
+	"Commit all with message and push origin qa": {
+		"prefix": "commitallmsgpushoriginqa",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin qa"
+		],
+		"description": "Commit all with message and push origin qa"
+	},
+	"Commit all with message and push origin uat": {
+		"prefix": "commitallmsgpushoriginuat",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin uat"
+		],
+		"description": "Commit all with message and push origin uat"
+	},
+	"Commit all with message and push origin dev": {
+		"prefix": "commitallmsgpushorigindev",
+		"body": [
+			"git commit -am \"$1\"",
+			"git push origin dev"
+		],
+		"description": "Commit all with message and push origin dev"
+	},
+	"Git add all": {
+		"prefix": "gitaddall",
+		"body": [
+			"git add ."
+		],
+		"description": "Git add all"
+	},
+	"Git add all and commit": {
+		"prefix": "gitaddallcommit",
+		"body": [
+			"git add .",
+			"git commit -m \"$1\""
+		],
+		"description": "Git add all and commit"
+	},
+	"Git add all and commit with message": {
+		"prefix": "gitaddallcommitmsg",
+		"body": [
+			"git add .",
+			"git commit -m \"$1\""
+		],
+		"description": "Git add all and commit with message"
+	},
+	"Git add all and commit with message and push": {
+		"prefix": "gitaddallcommitmsgpush",
+		"body": [
+			"git add .",
+			"git commit -m \"$1\"",
+			"git push"
+		],
+		"description": "Git add all and commit with message and push"
+	},
+	"Git add all and commit with message and push origin": {
+		"prefix": "gitaddallcommitmsgpushorigin",
+		"body": [
+			"git add .",
+			"git commit -m \"$1\"",
+			"git push origin"
+		],
+		"description": "Git add all and commit with message and push origin"
+	},
+	"Git add all and commit with message and push origin master": {
+		"prefix": "gitaddallcommitmsgpushoriginmaster",
+		"body": [
+			"git add .",
+			"git commit -m \"$1\"",
+			"git push origin master"
+		],
+		"description": "Git add all and commit with message and push origin master"
+	},
+	"Git add all and commit with message and push origin main": {
+		"prefix": "gitaddallcommitmsgpushoriginmain",
+		"body": [
+			"git add .",
+			"git commit -m \"$1\"",
+			"git push origin main"
+		],
+		"description": "Git add all and commit with message and push origin main"
+	},
+	"Git merge": {
+		"prefix": "gitmerge",
+		"body": [
+			"git merge $1"
+		],
+		"description": "Git merge"
+	},
+	"Git merge with branch": {
+		"prefix": "gitmergebranch",
+		"body": [
+			"git merge $1"
+		],
+		"description": "Git merge with branch"
+	}	
+}
