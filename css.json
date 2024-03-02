@@ -124,5 +124,231 @@
 			"}"
 		],
 		"description": "CSS Media Query for Portrait Orientation"
+	},
+    "CSS Media Query - Retina": {
+		"prefix": "cssmediaretina",
+		"body": [
+			"@media screen and (-webkit-min-device-pixel-ratio: 2),",
+			"screen and (min-resolution: 192dpi) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Retina Displays"
+	},
+	"CSS Media Query - Print": {
+		"prefix": "cssmediaprint",
+		"body": [
+			"@media print {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Print"
+	},
+	"CSS Media Query - Dark Mode": {
+		"prefix": "cssmediadarkmode",
+		"body": [
+			"@media (prefers-color-scheme: dark) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Dark Mode"
+	},
+	"CSS Media Query - Light Mode": {
+		"prefix": "cssmedialightmode",
+		"body": [
+			"@media (prefers-color-scheme: light) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Light Mode"
+	},
+	"CSS Media Query - Reduced Motion": {
+		"prefix": "cssmediareducedmotion",
+		"body": [
+			"@media (prefers-reduced-motion: reduce) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Reduced Motion"
+	},
+	"CSS Media Query - No Reduced Motion": {
+		"prefix": "cssmediareducedmotionno",
+		"body": [
+			"@media (prefers-reduced-motion: no-preference) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for No Reduced Motion"
+	},
+	"CSS Media Query - Hover": {
+		"prefix": "cssmediahover",
+		"body": [
+			"@media (hover: hover) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Hover"
+	},
+	"CSS Media Query - No Hover": {
+		"prefix": "cssmediahoverno",
+		"body": [
+			"@media (hover: none) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for No Hover"
+	},
+	"CSS Media Query - Pointer": {
+		"prefix": "cssmediapointer",
+		"body": [
+			"@media (pointer: fine) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Pointer"
+	},
+	"CSS Media Query - Coarse Pointer": {
+		"prefix": "cssmediapointercoarse",
+		"body": [
+			"@media (pointer: coarse) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Coarse Pointer"
+	},
+	"CSS Media Query - No Pointer": {
+		"prefix": "cssmediapointerno",
+		"body": [
+			"@media (pointer: none) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for No Pointer"
+	},
+	"CSS Media Query - Any Pointer": {
+		"prefix": "cssmediapointerany",
+		"body": [
+			"@media (pointer: any) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Any Pointer"
+	},
+	"CSS Media Query - Grid": {
+		"prefix": "cssmediagrid",
+		"body": [
+			"@media (display: grid) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Grid"
+	},
+	"CSS Media Query - No Grid": {
+		"prefix": "cssmediagridno",
+		"body": [
+			"@media (display: no-grid) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for No Grid"
+	},
+	"CSS Media Query - Flexbox": {
+		"prefix": "cssmediaflexbox",
+		"body": [
+			"@media (display: flex) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Flexbox"
+	},
+	"CSS Media Query - No Flexbox": {
+		"prefix": "cssmediaflexboxno",
+		"body": [
+			"@media (display: no-flex) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for No Flexbox"
+	},
+	"CSS Media Query - Inline Flexbox": {
+		"prefix": "cssmediaflexboxinline",
+		"body": [
+			"@media (display: inline-flex) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Inline Flexbox"
+	},
+	"CSS Media Query - No Inline Flexbox": {
+		"prefix": "cssmediaflexboxinlineno",
+		"body": [
+			"@media (display: no-inline-flex) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for No Inline Flexbox"
+	},
+	"CSS Media Query - Block": {
+		"prefix": "cssmediablock",
+		"body": [
+			"@media (display: block) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Block"
+	},
+	"CSS Media Query - No Block": {
+		"prefix": "cssmediablockno",
+		"body": [
+			"@media (display: no-block) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for No Block"
+	},
+	"CSS Media Query - Inline Block": {
+		"prefix": "cssmediablockinline",
+		"body": [
+			"@media (display: inline-block) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Inline Block"
+	},
+	"CSS Media Query - No Inline Block": {
+		"prefix": "cssmediablockinlineno",
+		"body": [
+			"@media (display: no-inline-block) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for No Inline Block"
+	},
+	"CSS Media Query - Inline": {
+		"prefix": "cssmediainline",
+		"body": [
+			"@media (display: inline) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for Inline"
+	},
+	"CSS Media Query - No Inline": {
+		"prefix": "cssmediainlineno",
+		"body": [
+			"@media (display: no-inline) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for No Inline"
+	},
+	"CSS Media Query - List Item": {
+		"prefix": "cssmedialistitem",
+		"body": [
+			"@media (display: list-item) {",
+			"\t$1",
+			"}"
+		],
+		"description": "CSS Media Query for List Item"
 	}	
 }
